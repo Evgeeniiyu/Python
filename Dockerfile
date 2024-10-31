@@ -7,8 +7,8 @@ WORKDIR /app
 # Копіювання файлів у контейнер
 COPY . /app
 
-# Встановлення Flask
-RUN pip install --no-cache-dir Flask
+# Встановлення залежностей з requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Вказуємо порт для Flask
 EXPOSE 5000
